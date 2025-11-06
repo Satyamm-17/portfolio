@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NODE_ENV === 'production';
-
 const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
@@ -10,8 +8,8 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: isProd ? '/portfolio' : '',
-  assetPrefix: isProd ? '/portfolio/' : '',
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio/',
 };
 
 export default nextConfig;
